@@ -1,0 +1,107 @@
+
+  <mat-accordion>
+
+      <mat-expansion-panel
+      class="lineseparator"
+      [expanded]="step === 'profile-menu'">
+      <mat-expansion-panel-header
+      [expandedHeight]="'48px'">
+      <mat-icon>portrait</mat-icon>
+      <mat-panel-title>
+      <span 
+      class="">Vinay</span>
+      </mat-panel-title>
+      </mat-expansion-panel-header>
+      
+      <ul>
+      <li 
+      routerLinkActive="active-link"><a
+      [routerLink]="['/dashboard/changepassword']">Change password</a></li>
+      
+      <li 
+      routerLinkActive="active-link"><a
+      [routerLink]="['/dashboard/about']">About</a></li>
+      
+      <li 
+      routerLinkActive="active-link"><a
+      (click)="logout()">Logout</a></li>
+      
+      </ul>
+      
+      </mat-expansion-panel>
+      <mat-expansion-panel class="lineseparator" [expanded]="step === 3001">
+      
+      <mat-expansion-panel-header [expandedHeight]="'48px'">
+      
+      <mat-icon>explore</mat-icon>
+      
+      <mat-panel-title>
+      
+      <span class="">Product Management</span>
+      
+      </mat-panel-title>
+      
+      </mat-expansion-panel-header>
+      
+      <p 
+      class="mb-1 sub-head">Create Product</p>
+      
+      <!-- <ul>
+      
+      <li 
+      routerLinkActive="active-link"><a
+      [routerLink]="['/dashboard/maintenance/alluser']">Create Product</a></li>
+      
+      <li 
+      routerLinkActive="active-link"><a
+      [routerLink]="['/dashboard/maintenance/adduser']">Modify Product</a></li>
+
+      <li 
+      routerLinkActive="active-link"><a
+      [routerLink]="['/dashboard/maintenance/adduser']">Configure Fee</a></li>
+      
+
+      <li 
+      routerLinkActive="active-link"><a
+      [routerLink]="['/dashboard/maintenance/adduser']">Configure Alert</a></li>
+      </ul> -->
+      
+      <p class="mt-2 mb-1 sub-head">Modify Product</p>
+      <p class="mt-2 mb-1 sub-head">Configure Fee</p>
+      <p class="mt-2 mb-1 sub-head">Configure Alert</p>
+     
+      
+      </mat-expansion-panel>
+      
+      <mat-expansion-panel
+      class="lineseparator pushnotifications"
+      [expanded]="step === 30012">
+      
+      <mat-expansion-panel-header
+      [expandedHeight]="'48px'">
+      
+      <mat-icon><i
+      class="fa fa-paper-plane-o"
+      aria-hidden="true"></i></mat-icon>
+      
+      <mat-panel-title
+      [routerLink]="['/tools/pushnotifications']">
+      
+      <span 
+      class="">Push Notifications</span>
+      
+      </mat-panel-title>
+      
+      </mat-expansion-panel-header>
+      
+      <!-- <ul>
+      
+      <li routerLinkActive="active-link"><a [routerLink]="['/tools/pushnotifications']">Fetch Push notifications
+      
+      </a></li>
+      
+      </ul> -->
+      
+      </mat-expansion-panel>
+      
+      </mat-accordion>

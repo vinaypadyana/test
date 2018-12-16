@@ -1,0 +1,94 @@
+
+<app-header></app-header>
+<div style="background-image: url(assets/images/background.png)" >
+<mat-grid-list cols="4" rowHeight="600px">
+    <mat-grid-tile>
+        <mat-card class="login-card">
+
+            <img mat-card-image src="assets/images/visa_card.png" alt="Visa">
+          
+        <mat-card-header>
+          <mat-card-title></mat-card-title>
+        </mat-card-header>
+        
+        </mat-card>
+</mat-grid-tile>
+       
+<mat-grid-tile>
+
+<mat-card class="login-card">
+
+    <img mat-card-image src="assets/images/master_card.png" alt="Master">
+  
+<mat-card-header>
+  <mat-card-title></mat-card-title>
+</mat-card-header>
+
+</mat-card>
+
+</mat-grid-tile>
+
+<mat-grid-tile>
+    <mat-card class="login-card">
+        <img mat-card-image src="assets/images/rupay_card.jpg" alt="Rupay">  
+    <mat-card-header>
+      <mat-card-title></mat-card-title>
+    </mat-card-header>  
+    </mat-card>
+</mat-grid-tile>
+
+<mat-grid-tile>
+
+    <mat-card class="login-card">
+
+  
+        <mat-menu #appMenu="matMenu">
+            <button mat-menu-item>Forgot Password</button>
+            <button mat-menu-item>Help</button>
+          </mat-menu>
+          <button mat-icon-button [matMenuTriggerFor]="appMenu">
+            <mat-icon >more_vert</mat-icon>
+          </button>
+      <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="login-form" [formGroup]="loginForm">
+          <table class="login-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="login-full-width">
+                <input matInput placeholder="User Name"  formControlName="userName" name="username" required>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+            <td><mat-form-field class="login-full-width">
+              <input matInput placeholder="Password"  formControlName="userPassword"type="password" name="password" required>
+            </mat-form-field></td>
+          </tr>
+        
+          <tr>
+              <td><mat-form-field class="login-full-width">
+                <input matInput placeholder="Security Code" formControlName="securityCode"type="password" name="securityCode" required>
+              </mat-form-field></td>
+            </tr>
+        </table>
+        </form>
+        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="login()" color="primary">Login</button>
+      </mat-card-actions>
+    </mat-card>
+
+</mat-grid-tile>
+
+
+  </mat-grid-list>
+
+</div>
+
+  <app-footer></app-footer>
+
+  <router-outlet></router-outlet>

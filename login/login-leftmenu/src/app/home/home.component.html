@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Welcome To Card Management System</span>
+        <span class="home-spacer"></span>
+        <mat-icon class="home-icon">Logout</mat-icon>
+      </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-sidenav-container
+fxLayout="column">
+<mat-sidenav>
+
+<app-left-menu></app-left-menu>
+</mat-sidenav>
+</mat-sidenav-container>
+
+<app-left-menu></app-left-menu>
+    <router-outlet></router-outlet>
